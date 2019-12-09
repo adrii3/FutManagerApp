@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">FutManagerApp</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="tacticas">
+        <item>4-3-3</item>
+        <item>3-4-3</item>
+        <item>5-3-2</item>
+        <item>4-2-3-1</item>
+        <item>4-5-1</item>
+        <item>4-4-2</item>
+    </string-array>
+</resources>

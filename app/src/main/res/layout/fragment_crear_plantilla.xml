@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CrearPlantillaFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/nombre_plantilla_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre de la plantilla: "
+            android:textSize="20dp"/>
+        <EditText
+            android:id="@+id/edit_nombre_plantilla"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre de la plantilla"/>
+        <TextView
+            android:id="@+id/formacion_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Formación: "
+            android:textSize="20dp"/>
+        <Spinner
+            android:id="@+id/tactica"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/tacticas"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Crear plantilla"/>
+
+    </LinearLayout>
+</FrameLayout>

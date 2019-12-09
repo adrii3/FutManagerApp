@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/bienvenidaFragment">
+    <fragment
+        android:id="@+id/bienvenidaFragment"
+        android:name="com.example.futmanagerapp.BienvenidaFragment"
+        android:label="fragment_bienvenida"
+        tools:layout="@layout/fragment_bienvenida" >
+        <action
+            android:id="@+id/action_bienvenidaFragment_to_iniciarSesionFragment"
+            app:destination="@id/iniciarSesionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/iniciarSesionFragment"
+        android:name="com.example.futmanagerapp.IniciarSesionFragment"
+        android:label="fragment_iniciar_sesion"
+        tools:layout="@layout/fragment_iniciar_sesion" />
+    <fragment
+        android:id="@+id/registrarFragment"
+        android:name="com.example.futmanagerapp.RegistrarFragment"
+        android:label="fragment_registrar"
+        tools:layout="@layout/fragment_registrar" />
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.example.futmanagerapp.InicioFragment"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" />
+    <fragment
+        android:id="@+id/plantillasFragment"
+        android:name="com.example.futmanagerapp.PlantillasFragment"
+        android:label="fragment_plantillas"
+        tools:layout="@layout/fragment_plantillas" />
+    <fragment
+        android:id="@+id/clubFragment"
+        android:name="com.example.futmanagerapp.ClubFragment"
+        android:label="fragment_club"
+        tools:layout="@layout/fragment_club" />
+    <fragment
+        android:id="@+id/jugadoresFragment"
+        android:name="com.example.futmanagerapp.JugadoresFragment"
+        android:label="fragment_jugadores"
+        tools:layout="@layout/fragment_jugadores" />
+    <fragment
+        android:id="@+id/gestionarEquipacionFragment"
+        android:name="com.example.futmanagerapp.GestionarEquipacionFragment"
+        android:label="fragment_gestionar_equipacion"
+        tools:layout="@layout/fragment_gestionar_equipacion" />
+    <fragment
+        android:id="@+id/escudoFragment"
+        android:name="com.example.futmanagerapp.EscudoFragment"
+        android:label="fragment_escudo"
+        tools:layout="@layout/fragment_escudo" />
+    <fragment
+        android:id="@+id/estadioFragment"
+        android:name="com.example.futmanagerapp.EstadioFragment"
+        android:label="fragment_estadio"
+        tools:layout="@layout/fragment_estadio" />
+    <fragment
+        android:id="@+id/crearJugadorFragment2"
+        android:name="com.example.futmanagerapp.CrearJugadorFragment"
+        android:label="fragment_crear_jugador"
+        tools:layout="@layout/fragment_crear_jugador" />
+    <fragment
+        android:id="@+id/crearPlantillaFragment"
+        android:name="com.example.futmanagerapp.CrearPlantillaFragment"
+        android:label="fragment_crear_plantilla"
+        tools:layout="@layout/fragment_crear_plantilla" />
+    <fragment
+        android:id="@+id/verPlantillaFragment"
+        android:name="com.example.futmanagerapp.VerPlantillaFragment"
+        android:label="fragment_ver_plantilla"
+        tools:layout="@layout/fragment_ver_plantilla" />
+    <fragment
+        android:id="@+id/verJugadorFragment"
+        android:name="com.example.futmanagerapp.VerJugadorFragment"
+        android:label="fragment_ver_jugador"
+        tools:layout="@layout/fragment_ver_jugador" />
+</navigation>

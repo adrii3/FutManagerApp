@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/inicio_fragment"
+        android:icon="@drawable/home"
+        android:title="Inicio" />
+
+    <item
+        android:id="@+id/plantillas_fragment"
+        android:icon="@drawable/template"
+        android:title="Plantillas" />
+
+    <item
+        android:id="@+id/club_fragment"
+        android:icon="@drawable/escudo"
+        android:title="Club" />
+    <item
+        android:id="@+id/jugadores_fragment"
+        android:icon="@drawable/player"
+        android:title="Jugadores" />
+
+
+</menu>
