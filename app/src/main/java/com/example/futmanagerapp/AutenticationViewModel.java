@@ -2,6 +2,7 @@ package com.example.futmanagerapp;
 
 import android.app.Application;
 import android.os.AsyncTask;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
@@ -10,6 +11,8 @@ import androidx.lifecycle.MutableLiveData;
 import com.example.futmanagerapp.DataBase.Usuario;
 import com.example.futmanagerapp.DataBase.UsuariosDAO;
 import com.example.futmanagerapp.DataBase.UsuariosDataBase;
+
+import java.util.List;
 
 
 public class AutenticationViewModel extends AndroidViewModel {
@@ -47,7 +50,7 @@ public class AutenticationViewModel extends AndroidViewModel {
         estadoRegistroMLD.postValue(EstadoRegistro.INICIO_REGISTRO);
     }
 
-    public void CrearCuentaEIniciarSesion(final String usuario, final String contraseña){
+    public void crearCuentaEIniciarSesion(final String usuario, final String contraseña){
         AsyncTask.execute(new Runnable() {
             @Override
             public void run() {
