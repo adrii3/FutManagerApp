@@ -2,20 +2,21 @@ package com.example.futmanagerapp;
 
 
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
-import androidx.navigation.Navigation;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.navigation.Navigation;
+
+
 
 
 /**
@@ -65,12 +66,34 @@ public class IniciarSesionFragment extends Fragment {
         botonIniciarSesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //verificar el inicio sesion en la bbdd i dar acceso a la aplicacion
                 autenticationViewModel.iniciarSesion(usuarioEditText.getText().toString(),contrasenyaEditText.getText().toString());
 
 
             }
         });
 
+        autenticationViewModel.estadoAutenticacionMLD.observe(getViewLifecycleOwner(), new Observer<AutenticationViewModel.EstadoAutenticacion>() {
+            @Override
+            public void onChanged(AutenticationViewModel.EstadoAutenticacion estadoAutenticacion) {
+                switch (estadoAutenticacion){
+                    case AUTENTICADO:
+                        Navigation.findNavController(view).popBackStack();
+                        break;
+
+                    case NO_AUTENTICADO:
+                        Toast.makeText(getContext(),"Credenciales no validas", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+
+            }
+        });
+
+        requireActivity().getOnBackPressedDispatcher().addCallback(getViewLifecycleOwner(),
+                new OnBackPressedCallback(true) {
+                    @Override
+                    public void handleOnBackPressed() {
+                        Navigation.findNavController(view).popBackStack(R.id.inicioFragment, false);
+                    }
+                });
     }
 }
