@@ -77,7 +77,7 @@ public class RegistrarFragment extends Fragment {
             public void onChanged(AutenticationViewModel.EstadoAutenticacion estadoAutenticacion) {
                 switch (estadoAutenticacion){
                     case AUTENTICADO:
-                        Navigation.findNavController(view).popBackStack();
+                        Navigation.findNavController(view).navigate(R.id.inicioFragment);
                         break;
                 }
             }
